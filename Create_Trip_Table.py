@@ -13,16 +13,16 @@ query = """\
 CREATE TABLE Bike_Share_Trip (
 	trip_id				sint64		not null,
 	duration			sint64		not null,
-    start_date			time_stamp 	not null,
+    start_date			timestamp 	not null,
     start_station		varchar		not null,
     start_terminal		sint64		not null,
-    end_date			time_stamp 	not null,
+    end_date			timestamp 	not null,
     end_station			varchar		not null,
     end_terminal		sint64		not null,
     bike_no				sint64		not null,
     PRIMARY KEY(
-        (quantum(start_date, 80, 'd')),
-         start_date 
+        (quantum(start_date, 7, 'd')),
+         start_date, bike_no 
     )
 )
 WITH (
