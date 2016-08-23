@@ -15,9 +15,9 @@ To run the examples contained in this repo you will need to:
 Once the pre-requisites are installed/setup on your development environment you can run the example code:
 
 1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin\riak start ```);
-1. Run Create_Trip_Table.py script to create the table to store our trip data in;
-1. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
-1. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:
+2. Run Create_Trip_Table.py script to create the table to store our trip data in;
+3. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
+4. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:
 
 ```
 +--------------+---------+-------+-----------+---------+
@@ -35,8 +35,8 @@ Once the pre-requisites are installed/setup on your development environment you 
 +--------------+---------+-------+-----------+---------+
 ```
 
-1. .
-1. .
+5. .
+6. .
 
 ## Notes 
 
