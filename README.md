@@ -12,6 +12,28 @@ To run the examples contained in this repo you will need to:
 1. Clone this repo to your local machine; 
 1. Download the Bay Area Bike Share Year 2 data (http://www.bayareabikeshare.com/open-data) used in the example code [1];
 
+Once the pre-requisites are installed/setup on your development environment you can run the example code:
+
+1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin\riak start ```);
+1. Run Create_Trip_Table.py script to create the table to store our trip data in;
+1. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
+1. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:
+
+```
++--------------+---------+-------+-----------+---------+
+|    Column    |  Type   |Is Null|Primary Key|Local Key|
++--------------+---------+-------+-----------+---------+
+|   trip_id    | sint64  | false |           |         |
+|   duration   | sint64  | false |           |         |
+|  start_date  |timestamp| false |     1     |    1    |
+|start_station | varchar | false |           |         |
+|start_terminal| sint64  | false |           |         |
+|   end_date   |timestamp| false |           |         |
+| end_station  | varchar | false |           |         |
+| end_terminal | sint64  | false |           |         |
+|   bike_no    | sint64  | false |           |    2    |
++--------------+---------+-------+-----------+---------+
+```
 
 
 ## Notes 
