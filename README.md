@@ -1,6 +1,6 @@
 # ATO2016 - Easy Time Series Analysis
 
-This GitHub repository contains instructions and code to reproduce the work demonstrated in my All Things Open 2016 Presentation: Easy Time Series Analysis with NoSQL, Python, Pandas and Jupyter.
+This GitHub repository contains instructions and code to reproduce the work demonstrated in my All Things Open 2016 Presentation: Easy Time Series Analysis with NoSQL, Python, Pandas and Jupyter (https://allthingsopen.org/talk/easy-time-series-analysis-with-nosql-python-pandas-jupyter/).
 
 To run the examples contained in this repo you will need to:
 
