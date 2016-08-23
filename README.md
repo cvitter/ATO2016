@@ -18,7 +18,6 @@ Once the pre-requisites are installed/setup on your development environment you 
 2. Run Create_Trip_Table.py script to create the table to store our trip data in;
 3. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
 4. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:
-
 ```
 +--------------+---------+-------+-----------+---------+
 |    Column    |  Type   |Is Null|Primary Key|Local Key|
@@ -34,7 +33,6 @@ Once the pre-requisites are installed/setup on your development environment you 
 |   bike_no    | sint64  | false |           |    2    |
 +--------------+---------+-------+-----------+---------+
 ```
-
 5. .
 6. .
 
