@@ -12,12 +12,12 @@ To run the examples contained in this repo you will need to:
 1. Clone this repo to your local machine; 
 1. Download the Bay Area Bike Share Year 2 data (http://www.bayareabikeshare.com/open-data) used in the example code [1];
 
-Once the pre-requisites are installed/setup on your development environment you can run the example code:
+Once the pre-requisites are installed/setup on your development environment you create the table that we are going to use to read and write our data:
 
 1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin\riak start ```);
-2. Run Create_Trip_Table.py script to create the table to store our trip data in;
-3. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
-4. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:  
+1. Run Create_Trip_Table.py script to create the table to store our trip data in;
+1. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
+1. Run the ``` DESCRIBE Bike_Share_Trip; ``` command within riak-shell to output the new table's schema as illustrated below:  
 ```
 +--------------+---------+-------+-----------+---------+--------+----+
 |    Column    |  Type   |Is Null|Primary Key|Local Key|Interval|Unit|
@@ -33,8 +33,28 @@ Once the pre-requisites are installed/setup on your development environment you 
 |   bike_no    | sint64  | false |           |    2    |        |    |
 +--------------+---------+-------+-----------+---------+--------+----+
 ```  
-5. .
-6. .
+
+In the next series of steps we will load the Bay Are Bike Share data into our newly created table:
+
+1. Place the 201508_trip_data.csv in the directory where your python scripts are located (or update the file's location in Write_Trip_Data.py line 42);
+1. Run Write_Trip_data.py to import the file's records into your newly created table (when the script completes the final line should say ``` Total Records: 354151 ```);
+1. Using riak-shell you can verify that the records have been written by running the following ``` SELECT ``` statement:
+
+```
+SELECT * FROM Bike_Share_Trip WHERE start_date > '2014-09-01 10:00:00' AND start_date < '2014-09-01 10:30:00';
++-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
+|trip_id|duration|     start_date     |         start_station          |start_terminal|      end_date      |         end_station          |end_terminal|bike_no|
++-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
+|433020 |  130   |2014-09-01T10:02:00Z|        Clay at Battery         |      41      |2014-09-01T10:04:00Z|       Davis at Jackson       |     42     |  109  |
+|433022 |  461   |2014-09-01T10:04:00Z|         Market at 10th         |      67      |2014-09-01T10:12:00Z|        Market at 4th         |     76     |  438  |
+|433021 |  461   |2014-09-01T10:04:00Z|         Market at 10th         |      67      |2014-09-01T10:12:00Z|        Market at 4th         |     76     |  498  |
+|433024 |  708   |2014-09-01T10:05:00Z|      Golden Gate at Polk       |      59      |2014-09-01T10:17:00Z|      Steuart at Market       |     74     |  100  |
+|433025 |  1631  |2014-09-01T10:17:00Z|Grant Avenue at Columbus Avenue |      73      |2014-09-01T10:44:00Z|    Embarcadero at Sansome    |     60     |  416  |
+|433026 |  1631  |2014-09-01T10:17:00Z|Grant Avenue at Columbus Avenue |      73      |2014-09-01T10:44:00Z|    Embarcadero at Sansome    |     60     |  549  |
+|433027 |  109   |2014-09-01T10:22:00Z|     Embarcadero at Bryant      |      54      |2014-09-01T10:23:00Z|       Spear at Folsom        |     49     |  468  |
+|433029 |  333   |2014-09-01T10:29:00Z|Castro Street and El Camino Real|      32      |2014-09-01T10:35:00Z|Mountain View Caltrain Station|     28     |  17   |
++-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
+```
 
 ## Notes 
 
