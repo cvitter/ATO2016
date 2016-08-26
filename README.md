@@ -50,7 +50,7 @@ In the next series of steps we will load the Bay Are Bike Share data into our ne
 1. Using riak-shell you can verify that the records have been written by running the following ``` SELECT ``` statement:
 
 ```
-SELECT * FROM Bike_Share_Trip WHERE start_date > '2014-09-01 10:00:00' AND start_date < '2014-09-01 10:30:00';
+riak-shell(3)>SELECT * FROM Bike_Share_Trip WHERE start_date > '2014-09-01 10:00:00' AND start_date < '2014-09-01 10:30:00';
 +-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
 |trip_id|duration|     start_date     |         start_station          |start_terminal|      end_date      |         end_station          |end_terminal|bike_no|
 +-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
