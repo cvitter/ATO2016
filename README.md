@@ -14,9 +14,9 @@ To run the examples contained in this repo you will need to:
 
 Once the pre-requisites are installed/setup on your development environment you create the table that we are going to use to read and write our data:
 
-1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin\riak start ```);
+1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin/riak start ```);
 1. Run Create_Trip_Table.py script to create the table to store our trip data in;
-1. Launch the Riak TS shell from the command line: ``` bin\riak-shell ```
+1. Launch the Riak TS shell from the command line: ``` bin/riak-shell ```
 1. Run the following commands within riak-shell to list the tables in your Riak TS database and output the new table's schema:
 ```
 riak-shell(1)>SHOW TABLES;
@@ -64,6 +64,8 @@ riak-shell(3)>SELECT * FROM Bike_Share_Trip WHERE start_date > '2014-09-01 10:00
 |433029 |  333   |2014-09-01T10:29:00Z|Castro Street and El Camino Real|      32      |2014-09-01T10:35:00Z|Mountain View Caltrain Station|     28     |  17   |
 +-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
 ```
+
+
 
 ## Notes 
 
