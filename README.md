@@ -15,7 +15,7 @@ To run the examples contained in this repo you will need to:
 Once the pre-requisites are installed/setup on your development environment you create the table that we are going to use to read and write our data:
 
 1. Start Riak TS (from the command line navigate to your Riak TS root directory and execute the following command: ``` bin/riak start ```);
-1. Run Create_Trip_Table.py script to create the table to store our trip data in;
+1. Run Create_Trip_Table.py script to create the table to store our trip data in (``` python Create_Trip_Table.py ```);
 1. Launch the Riak TS shell from the command line: ``` bin/riak-shell ```
 1. Run the following commands within riak-shell to list the tables in your Riak TS database and output the new table's schema:
 ```
@@ -46,7 +46,7 @@ riak-shell(2)>DESCRIBE Bike_Share_Trip;
 In the next series of steps we will load the Bay Are Bike Share data into our newly created table:
 
 1. Place the 201508_trip_data.csv in the directory where your python scripts are located (or update the file's location in Write_Trip_Data.py line 42);
-1. Run Write_Trip_data.py to import the file's records into your newly created table (when the script completes the final line should say ``` Total Records: 354151 ```);
+1. Run Write_Trip_data.py (``` python Write_Trip_data.py ```) to import the file's records into your newly created table (when the script completes the final line should say ``` Total Records: 354151 ```);
 1. Using riak-shell you can verify that the records have been written by running the following ``` SELECT ``` statement:
 
 ```

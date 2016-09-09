@@ -21,7 +21,7 @@ def write_data (data_to_write):
         result_message = "Error: {}".format(e)
     return result_message
 
-# Convert a the string representation of a date to a date with the proper time zone
+# Convert the string representation of a date to a date with the proper time zone
 def convert_string_to_date(date_to_convert):
     first_split = date_to_convert.split(' ')
     date_split = first_split[0].split('/')
@@ -38,7 +38,7 @@ batch_count = 0
 total_count = 0
 
 # Read our csv file, iterate over each row, create batches of 100 rows, and
-# send the batches to write_date() to write the data to our table
+# send the batches to write_data() to write the data to our table
 with open('201508_trip_data.csv') as csvfile:
     rows = csv.reader(csvfile, delimiter=',', quotechar="'" )
 
