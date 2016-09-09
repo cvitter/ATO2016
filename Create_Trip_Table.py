@@ -29,6 +29,10 @@ WITH (
     n_val = 1
 )
 """
+# Note: By default Riak TS replicates each record 3 times (n_val = 3), in this 
+# example we are telling Riak TS to only create 1 copy of each record, if you
+# want 3 copies change the 'WITH (n_val = 1)' value or remove the entire line from
+# the DDL to revert to the default setting
 
 try:
     client.ts_query(table, query)
