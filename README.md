@@ -65,6 +65,11 @@ riak-shell(3)>SELECT * FROM Bike_Share_Trip WHERE start_date > '2014-09-01 10:00
 +-------+--------+--------------------+--------------------------------+--------------+--------------------+------------------------------+------------+-------+
 ```
 
+Now that you have loaded the data (and verified that it is there) you can move on to using Jupyter Notebook, Python, Pandas, and Matplotlib to perform analysis on the data. To start Jupyter:
+
+1. Within your shell navigate to the the ATO2016 directory (e.g. ``` cd ~/git/ATO2016 ``` if that is where you cloned/copied the files to on your machine)
+1. Type ``` jupyter notebook ``` and hit enter
+
 
 
 ## Notes 
