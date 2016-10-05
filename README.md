@@ -70,6 +70,10 @@ Now that you have loaded the data (and verified that it is there) you can move o
 1. Within your shell navigate to the the ATO2016 directory (e.g. ``` cd ~/git/ATO2016 ``` if that is where you cloned/copied the files to on your machine)
 1. Type ``` jupyter notebook ``` and hit enter
 
+When Jupyter is finished starting up it will launch a web browser tab/window showing a listing of files in your ATO2016 directory including the following notebook files that demonstrate how to do data analysis using Python, Pandas, and Matplotlib:
+
+* Step 1. Basic Pandas and Matplotlib.ipynb
+* Step 2. Rides Per Day in September 2014.ipynb
 
 
 ## Notes 
