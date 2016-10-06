@@ -73,12 +73,15 @@ Now that you have loaded the data (and verified that it is there) you can move o
 When Jupyter is finished starting up it will launch a web browser tab/window showing a listing of files in your ATO2016 directory including the following notebook files that demonstrate how to do data analysis using Python, Pandas, and Matplotlib:
 
 **Step 1. Basic Pandas and Matplotlib.ipynb**
+
 Demostrates the basics of querying Riak TS using Python and the Python Riak client, basic Pandas functionality for analyzing your data, and basic Matplotlib functionality for visualizing your data.
 
 **Step 2. Rides By Date, Day, and Bike in September 2014.ipynb**
+
 Demonstrates a few more features of Pandas that are useful for data analysis including the date library, value_counts, and sort_values while showing patterns of rides by time of day, day of the week, and bike. We also demonstrate how you can accomplish similar results using Riak TS's Group By feature.
 
-* Step 3. Rides by Station in September 2014.ipynb
+**Step 3. Rides by Station in September 2014.ipynb**
+
 This notebook shows how to analyze bike share station usage patterns using Group By with basic output formatting provided by Pandas for readability.
 
 SELECT start_station, start_terminal, end_station, end_terminal, count(start_station) FROM Bike_Share_Trip WHERE start_date > '2014-09-01 00:00:00' AND start_date < '2014-09-30 23:59:59' GROUP BY start_station, start_terminal, end_station, end_terminal
