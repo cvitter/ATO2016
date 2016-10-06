@@ -84,8 +84,6 @@ Demonstrates a few more features of Pandas that are useful for data analysis inc
 
 This notebook shows how to analyze bike share station usage patterns using Group By with basic output formatting provided by Pandas for readability.
 
-SELECT start_station, start_terminal, end_station, end_terminal, count(start_station) FROM Bike_Share_Trip WHERE start_date > '2014-09-01 00:00:00' AND start_date < '2014-09-30 23:59:59' GROUP BY start_station, start_terminal, end_station, end_terminal
-
 
 ## Notes 
 
