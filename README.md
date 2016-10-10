@@ -47,7 +47,7 @@ riak-shell(2)>DESCRIBE Bike_Share_Trip;
 In the next series of steps we will load the Bay Are Bike Share data into our newly created table:
 
 1. Place the 201508_trip_data.csv in the directory where your python scripts are located (or update the file's location in Write_Trip_Data.py line 42);
-1. Run Write_Trip_data.py (``` python Write_Trip_data.py ```) to import the file's records into your newly created table (when the script completes the final line should say ``` Total Records: 354151 ```);
+1. Run Write_Trip_data.py (``` python Write_Trip_data.py ```) to import the file's records into your newly created table (when the script completes the final line should say ``` Total Records: 354151 ```. On my MacBook Air the import averaged 80 seconds to complete which averages out to 4427 records a second.);
 1. Using riak-shell you can verify that the records have been written by running the following ``` SELECT ``` statement:
 
 ```
