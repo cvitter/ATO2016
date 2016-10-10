@@ -9,6 +9,7 @@ To run the examples contained in this repo you will need to:
 1. Install the Riak Python client using either Easy Install (easy_install riak) or Pip (pip install riak) - Note: Please use Version 2.5.5 or later of the Python client;
 1. Install Jupyter Notebook (http://jupyter.org/);
 1. Install Pandas (http://pandas.pydata.org/);
+1. Install matplotlib (http://matplotlib.org/)
 1. Clone this repo to your local machine; 
 1. Download the Bay Area Bike Share Year 2 data (http://www.bayareabikeshare.com/open-data) used in the example code [1];
 
