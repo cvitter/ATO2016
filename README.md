@@ -83,7 +83,7 @@ Demonstrates a few more features of Pandas that are useful for data analysis inc
 
 **Step 3. Rides by Station in September 2014.ipynb**
 
-This notebook shows how to analyze bike share station usage patterns using Group By with basic output formatting provided by Pandas for readability.
+This notebook shows how to analyze bike share station usage patterns using Riak TS's Group By with basic output formatting provided by Pandas for readability.
 
 
 ## Notes 
