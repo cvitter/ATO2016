@@ -1,3 +1,6 @@
+# Create_Trip_Table.py
+# Python script that creates the Bike_Share_Trip table in Riak TS
+
 # Import and call the Riak client to connect to your Riak TS node or cluster
 # See http://docs.basho.com/riak/ts/latest/developing/python/ for more information
 # on how to use the Riak client for Python
@@ -34,6 +37,7 @@ WITH (
 # want 3 copies change the 'WITH (n_val = 1)' value or remove the entire line from
 # the DDL to revert to the default setting
 
+# Execute our SQL DDL statement with .ts_query()
 try:
     client.ts_query(table, query)
     print("Table '{}' created successfully".format(table))
